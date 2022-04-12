@@ -6,22 +6,30 @@ import (
 )
 
 func main() {
-	isPalindrome := false
-	foo := "saippuakivikauppias"
-	length := len(foo)
+	outputResult("saippuakivikauppias")
+	outputResult("foobar")
+}
+
+func checkIfPalindrome(text string) bool {
+	length := len(text)
 	reverse := []string{}
 
 	for i := length - 1; i >= 0; i-- {
-		reverse = append(reverse, string(foo[i]))
+		reverse = append(reverse, string(text[i]))
 	}
 
-	if foo == strings.Join(reverse, "") {
-		isPalindrome = true
+	if text == strings.Join(reverse, "") {
+		return true
 	}
+	return false
+}
+
+func outputResult(text string) {
+	isPalindrome := checkIfPalindrome(text)
 
 	if isPalindrome {
-		fmt.Printf("'%s' is a palindrome", foo)
+		fmt.Printf("'%s' is a palindrome\n", text)
 	} else {
-		fmt.Printf("'%s' is a not palindrome", foo)
+		fmt.Printf("'%s' is a not palindrome\n", text)
 	}
 }
