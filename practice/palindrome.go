@@ -1,4 +1,4 @@
-package main
+package practice
 
 import (
 	"fmt"
@@ -10,7 +10,7 @@ func main() {
 	outputResult("foobar")
 }
 
-func checkIfPalindrome(text string) bool {
+func CheckIfPalindrome(text string) bool {
 	length := len(text)
 	reverse := []string{}
 
@@ -25,7 +25,7 @@ func checkIfPalindrome(text string) bool {
 }
 
 func outputResult(text string) {
-	isPalindrome := checkIfPalindrome(text)
+	isPalindrome := CheckIfPalindrome(text)
 
 	if isPalindrome {
 		fmt.Printf("'%s' is a palindrome\n", text)
