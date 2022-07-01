@@ -6,8 +6,13 @@ import (
 )
 
 func main() {
-	outputResult("saippuakivikauppias")
-	outputResult("foobar")
+	//outputResult("saippuakivikauppias")
+	//outputResult("foobar")
+
+	nums := []int{1, 7, 3, 6, 5, 6}
+	result := practice.PivotIndex(nums)
+
+	fmt.Printf("%d", result)
 }
 
 func outputResult(text string) {
