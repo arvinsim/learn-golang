@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"learn-golang/leetcode"
 	"learn-golang/practice"
 )
 
@@ -10,7 +11,7 @@ func main() {
 	//outputResult("foobar")
 
 	nums := []int{1, 7, 3, 6, 5, 6}
-	result := practice.PivotIndex(nums)
+	result := leetcode.PivotIndex(nums)
 
 	fmt.Printf("%d", result)
 }

@@ -1,7 +1,4 @@
-package practice
-
-func main() {
-}
+package leetcode
 
 func PivotIndex(nums []int) int {
 	for idx, _ := range nums {
