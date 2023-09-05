@@ -7,13 +7,12 @@ import (
 func CheckIfPalindrome(text string) bool {
 	length := len(text)
 	reverse := []string{}
+	lowercaseText := strings.ToLower(text)
 
 	for i := length - 1; i >= 0; i-- {
-		reverse = append(reverse, string(text[i]))
+		character := string(lowercaseText[i])
+		reverse = append(reverse, character)
 	}
 
-	if text == strings.Join(reverse, "") {
-		return true
-	}
-	return false
+	return lowercaseText == strings.Join(reverse, "")
 }
